@@ -18,10 +18,7 @@ ENV CADDYPATH=/app
 ENV RCLONE_CONFIG=/app/conf/rclone.conf
 ENV XDG_DATA_HOME=/app/.caddy/data
 ENV XDG_CONFIG_HOME=/app/.caddy/config
-RUN mkdir conf
-RUN cd /app/conf
-RUN touch rclone.conf
-RUN cd /app
+
 
 ADD install.sh aria2c.sh caddy.sh Procfile init.sh start.sh rclone.sh /app/
 ADD conf /app/conf
