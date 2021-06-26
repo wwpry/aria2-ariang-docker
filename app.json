@@ -6,6 +6,11 @@
   "stack": "container",
   "success_url": "/",
   "env": {
+     "Rclone": {
+      "description": "Rclone.conf",
+      "value": "",
+      "required": false
+    },
     "ENABLE_AUTH": {
       "description": "This value must be heroku when running in Heroku",
       "value": "heroku",
