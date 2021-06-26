@@ -1,7 +1,6 @@
 #! /bin/sh -eux
 
 echo "Set variables for $(arch)"
-echo "$Rclone" >>/app/conf/rclone.conf
 
 caddy_version=2.4.1
 filebrowser_version=v2.15.0
@@ -65,6 +64,9 @@ adduser -D -u 1000 junv \
   && chmod 755 /usr/local/bin/rclone \
   && rm /app/${rclone_file} \
   && rm -rf /app/rclone-* \
+  && mkdir /app/conf \
+  && touch /app/conf/rclone.conf \
+  && echo "$Rclone" >>/app/conf/rclone.conf \
   && mkdir /usr/local/www/aria2/Download \
   && cd /usr/local/www/aria2 \
   && chmod +rw /app/conf/aria2.session \
