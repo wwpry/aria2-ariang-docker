@@ -24,6 +24,10 @@ ADD conf /app/conf
 ADD Caddyfile SecureCaddyfile HerokuCaddyfile /usr/local/caddy/
 
 RUN ./install.sh
+RUN mkdir conf
+RUN cd /app/conf
+RUN touch rclone.conf
+RUN cd /app
 
 RUN rm ./install.sh
 
