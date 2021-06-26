@@ -5,6 +5,7 @@
   "keywords": ["docker", "aria2", "rclone", "fllebrowser", "ariang"],
   "stack": "container",
   "success_url": "/",
+  "env": {
     "ENABLE_AUTH": {
       "description": "This value must be heroku when running in Heroku",
       "value": "heroku",
