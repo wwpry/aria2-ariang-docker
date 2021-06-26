@@ -64,8 +64,6 @@ adduser -D -u 1000 junv \
   && chmod 755 /usr/local/bin/rclone \
   && rm /app/${rclone_file} \
   && rm -rf /app/rclone-* \
-  && touch /app/conf/rclone.conf \
-  && echo "$Rclone" >>/app/conf/rclone.conf \
   && mkdir /usr/local/www/aria2/Download \
   && cd /usr/local/www/aria2 \
   && chmod +rw /app/conf/aria2.session \
